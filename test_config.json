@@ -1,0 +1,9 @@
+{
+  "executable_name": "champsim_test",
+  "block": {
+    "branch": "bip",
+    "btb": "default",
+    "prefetcher": "next_line",
+    "replacement": "lru"
+  }
+}
