@@ -1,33 +1,18 @@
-.csconfig/
-_configuration.mk
-
-**/__pycache__/
-*.pyc
-
+# Binaries and build outputs
 bin/
+*.o
+*.a
 
-**/*.o
-**/*.d
-
-test/000-test-main
-
-tracer/pin/obj-intel64/
-
-vcpkg_installed/
-
-**/_build
-**/_doxygen
-
-absolute.options
-**/legacy.options
-**/function_patch.options
-**/legacy_bridge.inc
-**/legacy_bridge.h
-**/legacy_bridge.cc
-
-.cache/
-compile_commands.json
-
-.vscode/
-**/.DS_Store
+# Trace files (too large for Git)
+*.champsimtrace.xz
+*.zip
 traces/
+
+# Temporary simulation logs
+sim_gen_*.log
+sim_baseline_*.log
+
+# Python virtual environment & cache
+venv/
+__pycache__/
+*.pyc
