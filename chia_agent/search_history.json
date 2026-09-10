@@ -1,0 +1,157 @@
+[
+  {
+    "generation": 1,
+    "timestamp": "2026-09-07 21:23:06",
+    "genome": {
+      "pattern_type": "STRIDE",
+      "degree": 4,
+      "distance": 2,
+      "throttle_mode": "ACC_AWARE",
+      "pattern_params": 0,
+      "throttle_params": 0
+    },
+    "metrics": {
+      "ipc": 1.26,
+      "instructions": 100000,
+      "cycles": 79349,
+      "l1d_access": 151134,
+      "l1d_hit": 149997,
+      "l1d_miss": 1137,
+      "l2c_access": 1494,
+      "l2c_hit": 536,
+      "l2c_miss": 958,
+      "l2c_pref_requested": 394,
+      "l2c_pref_issued": 394,
+      "l2c_pref_useful": 84,
+      "l2c_pref_useless": 0,
+      "l2c_miss_latency": 190.9,
+      "dram_row_hit": 4,
+      "dram_row_miss": 886,
+      "chia_accuracy": 0.200957
+    }
+  },
+  {
+    "generation": 2,
+    "timestamp": "2026-09-07 21:23:44",
+    "genome": {
+      "pattern_type": "DELTA",
+      "degree": 2,
+      "distance": 1,
+      "throttle_mode": "ACC_AWARE",
+      "pattern_params": 0,
+      "throttle_params": 0
+    },
+    "metrics": {
+      "ipc": 1.26,
+      "instructions": 100000,
+      "cycles": 79349,
+      "l1d_access": 151126,
+      "l1d_hit": 149985,
+      "l1d_miss": 1141,
+      "l2c_access": 1451,
+      "l2c_hit": 473,
+      "l2c_miss": 978,
+      "l2c_pref_requested": 351,
+      "l2c_pref_issued": 351,
+      "l2c_pref_useful": 126,
+      "l2c_pref_useless": 0,
+      "l2c_miss_latency": 188.1,
+      "dram_row_hit": 4,
+      "dram_row_miss": 863,
+      "chia_accuracy": 0.235616
+    }
+  },
+  {
+    "generation": 3,
+    "timestamp": "2026-09-07 21:23:59",
+    "genome": {
+      "pattern_type": "DELTA",
+      "degree": 3,
+      "distance": 2,
+      "throttle_mode": "BW_AWARE",
+      "pattern_params": 0,
+      "throttle_params": 0
+    },
+    "metrics": {
+      "ipc": 1.26,
+      "instructions": 100000,
+      "cycles": 79349,
+      "l1d_access": 151127,
+      "l1d_hit": 150019,
+      "l1d_miss": 1108,
+      "l2c_access": 1655,
+      "l2c_hit": 626,
+      "l2c_miss": 1029,
+      "l2c_pref_requested": 555,
+      "l2c_pref_issued": 555,
+      "l2c_pref_useful": 131,
+      "l2c_pref_useless": 0,
+      "l2c_miss_latency": 190.5,
+      "dram_row_hit": 4,
+      "dram_row_miss": 876,
+      "chia_accuracy": 0.177083
+    }
+  },
+  {
+    "generation": 4,
+    "timestamp": "2026-09-07 21:25:00",
+    "genome": {
+      "pattern_type": "NEXT_LINE",
+      "degree": 2,
+      "distance": 1,
+      "throttle_mode": "HYBRID",
+      "pattern_params": 0,
+      "throttle_params": 0
+    },
+    "metrics": {
+      "ipc": 1.26,
+      "instructions": 100000,
+      "cycles": 79349,
+      "l1d_access": 151138,
+      "l1d_hit": 150024,
+      "l1d_miss": 1114,
+      "l2c_access": 2919,
+      "l2c_hit": 1246,
+      "l2c_miss": 1673,
+      "l2c_pref_requested": 1820,
+      "l2c_pref_issued": 1820,
+      "l2c_pref_useful": 375,
+      "l2c_pref_useless": 0,
+      "l2c_miss_latency": 189.4,
+      "dram_row_hit": 12,
+      "dram_row_miss": 1316,
+      "chia_accuracy": 0.146935
+    }
+  },
+  {
+    "generation": 5,
+    "timestamp": "2026-09-07 21:25:12",
+    "genome": {
+      "pattern_type": "DELTA",
+      "degree": 4,
+      "distance": 3,
+      "throttle_mode": "ACC_AWARE",
+      "pattern_params": 0,
+      "throttle_params": 0
+    },
+    "metrics": {
+      "ipc": 1.26,
+      "instructions": 100000,
+      "cycles": 79349,
+      "l1d_access": 151126,
+      "l1d_hit": 149989,
+      "l1d_miss": 1137,
+      "l2c_access": 1528,
+      "l2c_hit": 542,
+      "l2c_miss": 986,
+      "l2c_pref_requested": 428,
+      "l2c_pref_issued": 428,
+      "l2c_pref_useful": 126,
+      "l2c_pref_useless": 0,
+      "l2c_miss_latency": 189.4,
+      "dram_row_hit": 4,
+      "dram_row_miss": 869,
+      "chia_accuracy": 0.188596
+    }
+  }
+]
