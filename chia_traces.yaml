@@ -1,0 +1,10 @@
+cat << 'EOF' > chia_traces.yaml
+benchmark_suite:
+  GAP:
+    traces:
+      - "bc.kron-2608B.champsimtrace.xz"
+      - "bc.road-131B.champsimtrace.xz"
+  XSBench:
+    traces:
+      - "xs_XL100_1.champsimtrace.xz"
+EOF

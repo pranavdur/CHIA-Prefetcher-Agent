@@ -1,9 +1,22 @@
 {
-  "executable_name": "champsim_test",
-  "block": {
-    "branch": "bip",
-    "btb": "default",
-    "prefetcher": "next_line",
-    "replacement": "lru"
+  "executable_name": "champsim_custom_loop",
+  "block_size": 64,
+  "page_size": 4096,
+  "heartbeat_frequency": 10000000,
+  "num_cores": 1,
+  "L1D": {
+    "sets": 64,
+    "ways": 8,
+    "latency": 5,
+    "mshr_size": 16,
+    "targets": 16
+  },
+  "L2C": {
+    "sets": 1024,
+    "ways": 8,
+    "latency": 10,
+    "mshr_size": 32,
+    "targets": 16,
+    "prefetcher": "custom_pref"
   }
 }

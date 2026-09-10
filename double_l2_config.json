@@ -1,0 +1,35 @@
+{
+  "executable_name": "bin/champsim_double_l2",
+  "block_size": 64,
+  "page_size": 4096,
+  "heartbeat_frequency": 10000000,
+  "num_cores": 1,
+  "L1I": {
+    "sets": 64,
+    "ways": 8,
+    "latency": 4,
+    "mshr_size": 8,
+    "targets": 8
+  },
+  "L1D": {
+    "sets": 64,
+    "ways": 8,
+    "latency": 5,
+    "mshr_size": 16,
+    "targets": 16
+  },
+  "L2C": {
+    "sets": 2048,
+    "ways": 16,
+    "latency": 10,
+    "mshr_size": 32,
+    "targets": 16
+  },
+  "LLC": {
+    "sets": 2048,
+    "ways": 16,
+    "latency": 20,
+    "mshr_size": 64,
+    "targets": 32
+  }
+}
