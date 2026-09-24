@@ -1,0 +1,56 @@
+{
+    "No Prefetcher": {
+        "600.perlbench_s-210B.champsimtrace.xz": {
+            "ipc": 1.565,
+            "accuracy": 0.0
+        },
+        "bc.web-704B.champsimtrace.xz": {
+            "ipc": 0.4573,
+            "accuracy": 0.0
+        },
+        "bfs.road-140B.champsimtrace.xz": {
+            "ipc": 0.1448,
+            "accuracy": 0.0
+        },
+        "xs.XL100nuclide-296B.champsimtrace.xz": {
+            "ipc": 0.08128,
+            "accuracy": 0.0
+        }
+    },
+    "Standard Next-Line": {
+        "600.perlbench_s-210B.champsimtrace.xz": {
+            "ipc": 1.641,
+            "accuracy": 0.36989756682764774
+        },
+        "bc.web-704B.champsimtrace.xz": {
+            "ipc": 0.585,
+            "accuracy": 5.733080897217854
+        },
+        "bfs.road-140B.champsimtrace.xz": {
+            "ipc": 0.1251,
+            "accuracy": 5.58577622393707
+        },
+        "xs.XL100nuclide-296B.champsimtrace.xz": {
+            "ipc": 0.07689,
+            "accuracy": 3.6864993982713976
+        }
+    },
+    "Basic Stride": {
+        "600.perlbench_s-210B.champsimtrace.xz": {
+            "ipc": 1.579,
+            "accuracy": 20.883534136546185
+        },
+        "bc.web-704B.champsimtrace.xz": {
+            "ipc": 0.48,
+            "accuracy": 32.231655548817464
+        },
+        "bfs.road-140B.champsimtrace.xz": {
+            "ipc": 0.1448,
+            "accuracy": 24.634146341463413
+        },
+        "xs.XL100nuclide-296B.champsimtrace.xz": {
+            "ipc": 0.08126,
+            "accuracy": 19.36936936936937
+        }
+    }
+}

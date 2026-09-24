@@ -1,0 +1,12 @@
+{
+  "accuracy": 14.5455,
+  "ipc": 1.233,
+  "genome": {
+    "pattern_type": "STRIDE",
+    "degree": 1,
+    "distance": 1,
+    "throttle_mode": "ACC_AWARE",
+    "pattern_params": 0,
+    "throttle_params": 0
+  }
+}

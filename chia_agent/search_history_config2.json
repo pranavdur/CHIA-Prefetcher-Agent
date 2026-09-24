@@ -1,0 +1,376 @@
+[
+    {
+        "generation": 1,
+        "genome": {
+            "explanation": "DELTA prefetching at degree 1 with HYBRID throttling achieved peak IPC and overall accuracy (13.04%). Switching to ACC_AWARE throttling with degree 1 and distance 1 removes overly conservative bandwidth constraints while strictly filtering low-confidence speculative deltas, targeting higher prefetch timeliness and accuracy on latency-sensitive workloads like xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 1,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.8278999999999999,
+        "avg_accuracy": 0.44534225,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.388889
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.559233
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.467,
+                "accuracy": 0.532489
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4196,
+                "accuracy": 0.300758
+            }
+        }
+    },
+    {
+        "generation": 1,
+        "genome": {
+            "explanation": "DELTA prefetching at degree 1 with HYBRID throttling achieved peak IPC and overall accuracy (13.04%). Switching to ACC_AWARE throttling with degree 1 and distance 1 removes overly conservative bandwidth constraints while strictly filtering low-confidence speculative deltas, targeting higher prefetch timeliness and accuracy on latency-sensitive workloads like xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 1,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.8278999999999999,
+        "avg_accuracy": 0.44534225,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.388889
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.559233
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.467,
+                "accuracy": 0.532489
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4196,
+                "accuracy": 0.300758
+            }
+        }
+    },
+    {
+        "generation": 2,
+        "genome": {
+            "explanation": "Increasing the prefetch distance to 2 and degree to 2 addresses prefetch timeliness issues by issuing requests further ahead of execution, particularly aiding latency-sensitive workloads like xs.XL100nuclide. Switching to STRIDE pattern detection with ACC_AWARE throttling captures structured multi-byte stride patterns effectively while filtering low-confidence requests to maintain accuracy.",
+            "new_genome": {
+                "pattern_type": "STRIDE",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.82815,
+        "avg_accuracy": 0.31198825,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.337719
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.368491
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.270974
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4196,
+                "accuracy": 0.270769
+            }
+        }
+    },
+    {
+        "generation": 3,
+        "genome": {
+            "explanation": "Switching back to DELTA pattern detection leverages fine-grained delta signatures that previously achieved much higher accuracy (44.5%). Combining a degree of 2 and distance of 2 with HYBRID throttling allows deeper speculative lookahead while preventing cache pollution and memory bandwidth saturation during low-accuracy phases.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "HYBRID",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.8278999999999999,
+        "avg_accuracy": 0.268449,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.291667
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.36014
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.467,
+                "accuracy": 0.274262
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4196,
+                "accuracy": 0.147727
+            }
+        }
+    },
+    {
+        "generation": 4,
+        "genome": {
+            "explanation": "Gen 1 (DELTA, degree 1, distance 1) yielded the highest accuracy (44.5%) but suffered from timeliness issues. Increasing degree to 2 in subsequent runs reduced accuracy without yielding major IPC gains. Setting DELTA pattern with degree 1 and distance 2 under ACC_AWARE throttling maintains precision while issuing requests further ahead to improve timeliness for latency-sensitive workloads like xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.8278999999999999,
+        "avg_accuracy": 0.44534225,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.388889
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.559233
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.467,
+                "accuracy": 0.532489
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4196,
+                "accuracy": 0.300758
+            }
+        }
+    },
+    {
+        "generation": 5,
+        "genome": {
+            "explanation": "Gen 1 (DELTA, degree 1, distance 1) yielded the highest accuracy (44.5%) but suffered from timeliness issues. Increasing degree to 2 in subsequent runs reduced accuracy without yielding major IPC gains. Setting DELTA pattern with degree 1 and distance 2 under ACC_AWARE throttling maintains precision while issuing requests further ahead to improve timeliness for latency-sensitive workloads like xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.8278999999999999,
+        "avg_accuracy": 0.44534225,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.388889
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.559233
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.467,
+                "accuracy": 0.532489
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4196,
+                "accuracy": 0.300758
+            }
+        }
+    },
+    {
+        "generation": 6,
+        "genome": {
+            "explanation": "Evaluating NEXT_LINE pattern detection for the first time in the search space to test whether simple sequential prefetching provides cleaner access streams with lower misprediction penalty. Setting degree to 2 and distance to 2 under ACC_AWARE throttling ensures timely delivery for spatial locality without over-saturating L2 cache lines.",
+            "new_genome": {
+                "pattern_type": "NEXT_LINE",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.826875,
+        "avg_accuracy": 0.175158525,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.224508
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.257841
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.463,
+                "accuracy": 0.162905
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0553801
+            }
+        }
+    },
+    {
+        "generation": 7,
+        "genome": {
+            "explanation": "Evaluating NEXT_LINE pattern detection for the first time in the search space to test whether simple sequential prefetching provides cleaner access streams with lower misprediction penalty. Setting degree to 2 and distance to 2 under ACC_AWARE throttling ensures timely delivery for spatial locality without over-saturating L2 cache lines.",
+            "new_genome": {
+                "pattern_type": "NEXT_LINE",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.826875,
+        "avg_accuracy": 0.175158525,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.224508
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.257841
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.463,
+                "accuracy": 0.162905
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0553801
+            }
+        }
+    },
+    {
+        "generation": 8,
+        "genome": {
+            "explanation": "Evaluating NEXT_LINE pattern detection for the first time in the search space to test whether simple sequential prefetching provides cleaner access streams with lower misprediction penalty. Setting degree to 2 and distance to 2 under ACC_AWARE throttling ensures timely delivery for spatial locality without over-saturating L2 cache lines.",
+            "new_genome": {
+                "pattern_type": "NEXT_LINE",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.826875,
+        "avg_accuracy": 0.175158525,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.224508
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.257841
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.463,
+                "accuracy": 0.162905
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0553801
+            }
+        }
+    },
+    {
+        "generation": 9,
+        "genome": {
+            "explanation": "Evaluating NEXT_LINE pattern detection for the first time in the search space to test whether simple sequential prefetching provides cleaner access streams with lower misprediction penalty. Setting degree to 2 and distance to 2 under ACC_AWARE throttling ensures timely delivery for spatial locality without over-saturating L2 cache lines.",
+            "new_genome": {
+                "pattern_type": "NEXT_LINE",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.826875,
+        "avg_accuracy": 0.175158525,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.224508
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.257841
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.463,
+                "accuracy": 0.162905
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0553801
+            }
+        }
+    },
+    {
+        "generation": 10,
+        "genome": {
+            "explanation": "Evaluating NEXT_LINE pattern detection for the first time in the search space to test whether simple sequential prefetching provides cleaner access streams with lower misprediction penalty. Setting degree to 2 and distance to 2 under ACC_AWARE throttling ensures timely delivery for spatial locality without over-saturating L2 cache lines.",
+            "new_genome": {
+                "pattern_type": "NEXT_LINE",
+                "degree": 2,
+                "distance": 2,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.826875,
+        "avg_accuracy": 0.175158525,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.224508
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.257841
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.463,
+                "accuracy": 0.162905
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0553801
+            }
+        }
+    }
+]

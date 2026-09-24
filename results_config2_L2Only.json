@@ -1,0 +1,896 @@
+{
+    "No Prefetcher": {
+        "600.perlbench_s-210B.champsimtrace.xz": {
+            "ipc": 1.633,
+            "accuracy": 35.62176165803109
+        },
+        "bc.kron-5154B.champsimtrace.xz": {
+            "ipc": 0.7224,
+            "accuracy": 10.513387374109556
+        },
+        "bc.twitter-2320B.champsimtrace.xz": {
+            "ipc": 0.4401,
+            "accuracy": 12.101483963618955
+        },
+        "bc.road-79B.champsimtrace.xz": {
+            "ipc": 0.2613,
+            "accuracy": 21.970881475013705
+        },
+        "bc.kron-2608B.champsimtrace.xz": {
+            "ipc": 0.209,
+            "accuracy": 15.874748886365623
+        },
+        "bc.road-95B.champsimtrace.xz": {
+            "ipc": 0.1847,
+            "accuracy": 23.539193399006482
+        },
+        "bc.web-1362B.champsimtrace.xz": {
+            "ipc": 2.396,
+            "accuracy": 45.47244094488189
+        },
+        "bc.road-174B.champsimtrace.xz": {
+            "ipc": 0.1555,
+            "accuracy": 21.074735515869047
+        },
+        "bc.web-1627B.champsimtrace.xz": {
+            "ipc": 0.692,
+            "accuracy": 47.24033875206853
+        },
+        "bc.twitter-1658B.champsimtrace.xz": {
+            "ipc": 0.1471,
+            "accuracy": 2.802632932222565
+        },
+        "bc.web-704B.champsimtrace.xz": {
+            "ipc": 0.5508,
+            "accuracy": 39.30530164533821
+        },
+        "bc.web-2078B.champsimtrace.xz": {
+            "ipc": 0.3813,
+            "accuracy": 14.912655436376443
+        },
+        "bc.urand-3004B.champsimtrace.xz": {
+            "ipc": 0.2514,
+            "accuracy": 3.262678947952503
+        },
+        "bfs.kron-154B.champsimtrace.xz": {
+            "ipc": 0.5565,
+            "accuracy": 98.43528922180607
+        },
+        "bfs.kron-223B.champsimtrace.xz": {
+            "ipc": 3.441,
+            "accuracy": 98.30508474576271
+        },
+        "bfs.kron-128B.champsimtrace.xz": {
+            "ipc": 0.4483,
+            "accuracy": 92.83314669652856
+        },
+        "bc.road-131B.champsimtrace.xz": {
+            "ipc": 0.1123,
+            "accuracy": 21.654453157406127
+        },
+        "bfs.kron-29B.champsimtrace.xz": {
+            "ipc": 3.643,
+            "accuracy": 98.30508474576271
+        },
+        "bfs.road-168B.champsimtrace.xz": {
+            "ipc": 1.371,
+            "accuracy": 98.4384037015616
+        },
+        "bfs.kron-469B.champsimtrace.xz": {
+            "ipc": 0.5555,
+            "accuracy": 98.44166666666668
+        },
+        "bfs.road-210B.champsimtrace.xz": {
+            "ipc": 3.648,
+            "accuracy": 98.30508474576271
+        },
+        "bc.twitter-309B.champsimtrace.xz": {
+            "ipc": 0.1078,
+            "accuracy": 4.026042637827087
+        },
+        "bfs.road-99B.champsimtrace.xz": {
+            "ipc": 1.37,
+            "accuracy": 98.4384037015616
+        },
+        "bfs.road-112B.champsimtrace.xz": {
+            "ipc": 0.174,
+            "accuracy": 20.85520664312303
+        },
+        "bfs.road-128B.champsimtrace.xz": {
+            "ipc": 0.1736,
+            "accuracy": 18.714482041377263
+        },
+        "bfs.road-19B.champsimtrace.xz": {
+            "ipc": 0.2367,
+            "accuracy": 18.08860286158509
+        },
+        "bc.twitter-876B.champsimtrace.xz": {
+            "ipc": 0.09109,
+            "accuracy": 4.563025210084034
+        },
+        "bfs.twitter-10B.champsimtrace.xz": {
+            "ipc": 0.305,
+            "accuracy": 72.115603774445
+        },
+        "bfs.twitter-160B.champsimtrace.xz": {
+            "ipc": 0.4807,
+            "accuracy": 59.902266865752686
+        },
+        "bfs.kron-542B.champsimtrace.xz": {
+            "ipc": 0.1556,
+            "accuracy": 16.811940814591768
+        },
+        "bfs.road-140B.champsimtrace.xz": {
+            "ipc": 0.1425,
+            "accuracy": 21.849517431554066
+        },
+        "bfs.twitter-163B.champsimtrace.xz": {
+            "ipc": 0.2837,
+            "accuracy": 68.99540608477074
+        },
+        "bfs.twitter-242B.champsimtrace.xz": {
+            "ipc": 0.2215,
+            "accuracy": 55.57948112388428
+        },
+        "bfs.twitter-44B.champsimtrace.xz": {
+            "ipc": 0.2426,
+            "accuracy": 17.37500180268528
+        },
+        "bfs.twitter-303B.champsimtrace.xz": {
+            "ipc": 0.2128,
+            "accuracy": 43.61040360501568
+        },
+        "bfs.web-1066B.champsimtrace.xz": {
+            "ipc": 1.194,
+            "accuracy": 96.29231595916174
+        },
+        "bfs.twitter-408B.champsimtrace.xz": {
+            "ipc": 0.1534,
+            "accuracy": 37.40033420864168
+        },
+        "bfs.web-1306B.champsimtrace.xz": {
+            "ipc": 1.12,
+            "accuracy": 95.95120685180379
+        },
+        "bfs.web-1825B.champsimtrace.xz": {
+            "ipc": 1.086,
+            "accuracy": 90.83503054989816
+        },
+        "bfs.web-56B.champsimtrace.xz": {
+            "ipc": 1.249,
+            "accuracy": 98.13333333333333
+        },
+        "bfs.urand-161B.champsimtrace.xz": {
+            "ipc": 0.1171,
+            "accuracy": 12.15584857869587
+        },
+        "bfs.web-79B.champsimtrace.xz": {
+            "ipc": 0.8857,
+            "accuracy": 46.86078252957234
+        },
+        "pr.road-138B.champsimtrace.xz": {
+            "ipc": 0.649,
+            "accuracy": 77.67467859139184
+        },
+        "bfs.urand-36B.champsimtrace.xz": {
+            "ipc": 0.1171,
+            "accuracy": 12.198812835022432
+        },
+        "bfs.urand-118B.champsimtrace.xz": {
+            "ipc": 0.08641,
+            "accuracy": 8.77181992817172
+        },
+        "pr.road-28B.champsimtrace.xz": {
+            "ipc": 0.6451,
+            "accuracy": 79.56556717618665
+        },
+        "bfs.urand-60B.champsimtrace.xz": {
+            "ipc": 0.1106,
+            "accuracy": 13.418859968824645
+        },
+        "bfs.urand-410B.champsimtrace.xz": {
+            "ipc": 0.1071,
+            "accuracy": 14.49277053599561
+        },
+        "bfs.urand-356B.champsimtrace.xz": {
+            "ipc": 0.09411,
+            "accuracy": 8.810911186527502
+        },
+        "pr.road-600B.champsimtrace.xz": {
+            "ipc": 0.6032,
+            "accuracy": 72.9424600351027
+        },
+        "pr.urand-129B.champsimtrace.xz": {
+            "ipc": 0.8661,
+            "accuracy": 97.45349997066243
+        },
+        "pr.twitter-2161B.champsimtrace.xz": {
+            "ipc": 0.04108,
+            "accuracy": 25.416004132189553
+        },
+        "pr.web-16B.champsimtrace.xz": {
+            "ipc": 0.7433,
+            "accuracy": 91.91285081240767
+        },
+        "pr.web-3076B.champsimtrace.xz": {
+            "ipc": 0.5184,
+            "accuracy": 50.58665092425193
+        },
+        "pr.web-4993B.champsimtrace.xz": {
+            "ipc": 0.6582,
+            "accuracy": 85.45410139213566
+        },
+        "pr.web-709B.champsimtrace.xz": {
+            "ipc": 0.8125,
+            "accuracy": 92.5439255143415
+        },
+        "xs.XL100hash-194B.champsimtrace.xz": {
+            "ipc": 0.1465,
+            "accuracy": 18.707673625706413
+        },
+        "pr.twitter-2741B.champsimtrace.xz": {
+            "ipc": 0.02284,
+            "accuracy": 7.0224890551045664
+        },
+        "xs.XL100hash-28B.champsimtrace.xz": {
+            "ipc": 0.2037,
+            "accuracy": 18.52189781021898
+        },
+        "pr.twitter-168B.champsimtrace.xz": {
+            "ipc": 0.0222,
+            "accuracy": 7.149999720681315
+        },
+        "pr.twitter-3197B.champsimtrace.xz": {
+            "ipc": 0.02064,
+            "accuracy": 7.671918245688738
+        },
+        "xs.XL100nuclide-7B.champsimtrace.xz": {
+            "ipc": 0.7897,
+            "accuracy": 24.091778202676863
+        },
+        "pr.twitter-833B.champsimtrace.xz": {
+            "ipc": 0.01965,
+            "accuracy": 6.865190648095068
+        },
+        "xs.XL100nuclide-185B.champsimtrace.xz": {
+            "ipc": 0.07266,
+            "accuracy": 6.68122637547249
+        },
+        "xs.XL100nuclide-296B.champsimtrace.xz": {
+            "ipc": 0.0789,
+            "accuracy": 6.723835177387183
+        },
+        "xs.XL100nuclide-577B.champsimtrace.xz": {
+            "ipc": 0.07687,
+            "accuracy": 6.676325409794639
+        },
+        "xs.XL100unionized-56B.champsimtrace.xz": {
+            "ipc": 1.055,
+            "accuracy": 98.43984962406014
+        },
+        "xs.XL100unionized-66B.champsimtrace.xz": {
+            "ipc": 1.056,
+            "accuracy": 98.45246868091378
+        },
+        "xs.XL100unionized-75B.champsimtrace.xz": {
+            "ipc": 1.056,
+            "accuracy": 98.44131455399061
+        },
+        "xs.XL100unionized-28B.champsimtrace.xz": {
+            "ipc": 0.204,
+            "accuracy": 18.52685816293411
+        },
+        "xs.XL100nuclide-829B.champsimtrace.xz": {
+            "ipc": 0.08343,
+            "accuracy": 6.793136416243144
+        },
+        "pr.kron-349B.champsimtrace.xz": {
+            "ipc": 0.01337,
+            "accuracy": 6.353572487091625
+        },
+        "pr.urand-2209B.champsimtrace.xz": {
+            "ipc": 0.0128,
+            "accuracy": 6.310244573429342
+        },
+        "pr.kron-90B.champsimtrace.xz": {
+            "ipc": 0.01315,
+            "accuracy": 6.307426915851493
+        }
+    },
+    "Standard Next-Line": {
+        "600.perlbench_s-210B.champsimtrace.xz": {
+            "ipc": 1.633,
+            "accuracy": 35.62176165803109
+        },
+        "bc.kron-5154B.champsimtrace.xz": {
+            "ipc": 0.7224,
+            "accuracy": 10.513387374109556
+        },
+        "bc.twitter-2320B.champsimtrace.xz": {
+            "ipc": 0.4401,
+            "accuracy": 12.101483963618955
+        },
+        "bc.road-79B.champsimtrace.xz": {
+            "ipc": 0.2613,
+            "accuracy": 21.970881475013705
+        },
+        "bc.kron-2608B.champsimtrace.xz": {
+            "ipc": 0.209,
+            "accuracy": 15.874748886365623
+        },
+        "bc.road-95B.champsimtrace.xz": {
+            "ipc": 0.1847,
+            "accuracy": 23.539193399006482
+        },
+        "bc.web-1362B.champsimtrace.xz": {
+            "ipc": 2.396,
+            "accuracy": 45.47244094488189
+        },
+        "bc.road-174B.champsimtrace.xz": {
+            "ipc": 0.1555,
+            "accuracy": 21.074735515869047
+        },
+        "bc.web-1627B.champsimtrace.xz": {
+            "ipc": 0.692,
+            "accuracy": 47.24033875206853
+        },
+        "bc.twitter-1658B.champsimtrace.xz": {
+            "ipc": 0.1471,
+            "accuracy": 2.802632932222565
+        },
+        "bc.web-704B.champsimtrace.xz": {
+            "ipc": 0.5508,
+            "accuracy": 39.30530164533821
+        },
+        "bc.web-2078B.champsimtrace.xz": {
+            "ipc": 0.3813,
+            "accuracy": 14.912655436376443
+        },
+        "bc.urand-3004B.champsimtrace.xz": {
+            "ipc": 0.2514,
+            "accuracy": 3.262678947952503
+        },
+        "bfs.kron-154B.champsimtrace.xz": {
+            "ipc": 0.5565,
+            "accuracy": 98.43528922180607
+        },
+        "bfs.kron-223B.champsimtrace.xz": {
+            "ipc": 3.441,
+            "accuracy": 98.30508474576271
+        },
+        "bfs.kron-128B.champsimtrace.xz": {
+            "ipc": 0.4483,
+            "accuracy": 92.83314669652856
+        },
+        "bc.road-131B.champsimtrace.xz": {
+            "ipc": 0.1123,
+            "accuracy": 21.654453157406127
+        },
+        "bfs.kron-29B.champsimtrace.xz": {
+            "ipc": 3.643,
+            "accuracy": 98.30508474576271
+        },
+        "bfs.road-168B.champsimtrace.xz": {
+            "ipc": 1.371,
+            "accuracy": 98.4384037015616
+        },
+        "bfs.kron-469B.champsimtrace.xz": {
+            "ipc": 0.5555,
+            "accuracy": 98.44166666666668
+        },
+        "bfs.road-210B.champsimtrace.xz": {
+            "ipc": 3.648,
+            "accuracy": 98.30508474576271
+        },
+        "bc.twitter-309B.champsimtrace.xz": {
+            "ipc": 0.1078,
+            "accuracy": 4.026042637827087
+        },
+        "bfs.road-99B.champsimtrace.xz": {
+            "ipc": 1.37,
+            "accuracy": 98.4384037015616
+        },
+        "bfs.road-112B.champsimtrace.xz": {
+            "ipc": 0.174,
+            "accuracy": 20.85520664312303
+        },
+        "bfs.road-19B.champsimtrace.xz": {
+            "ipc": 0.2367,
+            "accuracy": 18.08860286158509
+        },
+        "bc.twitter-876B.champsimtrace.xz": {
+            "ipc": 0.09109,
+            "accuracy": 4.563025210084034
+        },
+        "bfs.road-128B.champsimtrace.xz": {
+            "ipc": 0.1736,
+            "accuracy": 18.714482041377263
+        },
+        "bfs.twitter-10B.champsimtrace.xz": {
+            "ipc": 0.305,
+            "accuracy": 72.115603774445
+        },
+        "bfs.twitter-160B.champsimtrace.xz": {
+            "ipc": 0.4807,
+            "accuracy": 59.902266865752686
+        },
+        "bfs.kron-542B.champsimtrace.xz": {
+            "ipc": 0.1556,
+            "accuracy": 16.811940814591768
+        },
+        "bfs.road-140B.champsimtrace.xz": {
+            "ipc": 0.1425,
+            "accuracy": 21.849517431554066
+        },
+        "bfs.twitter-163B.champsimtrace.xz": {
+            "ipc": 0.2837,
+            "accuracy": 68.99540608477074
+        },
+        "bfs.twitter-242B.champsimtrace.xz": {
+            "ipc": 0.2215,
+            "accuracy": 55.57948112388428
+        },
+        "bfs.twitter-44B.champsimtrace.xz": {
+            "ipc": 0.2426,
+            "accuracy": 17.37500180268528
+        },
+        "bfs.twitter-303B.champsimtrace.xz": {
+            "ipc": 0.2128,
+            "accuracy": 43.61040360501568
+        },
+        "bfs.web-1066B.champsimtrace.xz": {
+            "ipc": 1.194,
+            "accuracy": 96.29231595916174
+        },
+        "bfs.twitter-408B.champsimtrace.xz": {
+            "ipc": 0.1534,
+            "accuracy": 37.40033420864168
+        },
+        "bfs.web-1306B.champsimtrace.xz": {
+            "ipc": 1.12,
+            "accuracy": 95.95120685180379
+        },
+        "bfs.web-1825B.champsimtrace.xz": {
+            "ipc": 1.086,
+            "accuracy": 90.83503054989816
+        },
+        "bfs.web-56B.champsimtrace.xz": {
+            "ipc": 1.249,
+            "accuracy": 98.13333333333333
+        },
+        "bfs.urand-161B.champsimtrace.xz": {
+            "ipc": 0.1171,
+            "accuracy": 12.15584857869587
+        },
+        "bfs.web-79B.champsimtrace.xz": {
+            "ipc": 0.8857,
+            "accuracy": 46.86078252957234
+        },
+        "pr.road-138B.champsimtrace.xz": {
+            "ipc": 0.649,
+            "accuracy": 77.67467859139184
+        },
+        "bfs.urand-36B.champsimtrace.xz": {
+            "ipc": 0.1171,
+            "accuracy": 12.198812835022432
+        },
+        "bfs.urand-118B.champsimtrace.xz": {
+            "ipc": 0.08641,
+            "accuracy": 8.77181992817172
+        },
+        "bfs.urand-60B.champsimtrace.xz": {
+            "ipc": 0.1106,
+            "accuracy": 13.418859968824645
+        },
+        "bfs.urand-356B.champsimtrace.xz": {
+            "ipc": 0.09411,
+            "accuracy": 8.810911186527502
+        },
+        "pr.road-28B.champsimtrace.xz": {
+            "ipc": 0.6451,
+            "accuracy": 79.56556717618665
+        },
+        "bfs.urand-410B.champsimtrace.xz": {
+            "ipc": 0.1071,
+            "accuracy": 14.49277053599561
+        },
+        "pr.road-600B.champsimtrace.xz": {
+            "ipc": 0.6032,
+            "accuracy": 72.9424600351027
+        },
+        "pr.urand-129B.champsimtrace.xz": {
+            "ipc": 0.8661,
+            "accuracy": 97.45349997066243
+        },
+        "pr.twitter-2161B.champsimtrace.xz": {
+            "ipc": 0.04108,
+            "accuracy": 25.416004132189553
+        },
+        "pr.web-16B.champsimtrace.xz": {
+            "ipc": 0.7433,
+            "accuracy": 91.91285081240767
+        },
+        "pr.web-3076B.champsimtrace.xz": {
+            "ipc": 0.5184,
+            "accuracy": 50.58665092425193
+        },
+        "pr.web-4993B.champsimtrace.xz": {
+            "ipc": 0.6582,
+            "accuracy": 85.45410139213566
+        },
+        "pr.web-709B.champsimtrace.xz": {
+            "ipc": 0.8125,
+            "accuracy": 92.5439255143415
+        },
+        "xs.XL100hash-194B.champsimtrace.xz": {
+            "ipc": 0.1465,
+            "accuracy": 18.707673625706413
+        },
+        "pr.twitter-2741B.champsimtrace.xz": {
+            "ipc": 0.02284,
+            "accuracy": 7.0224890551045664
+        },
+        "xs.XL100hash-28B.champsimtrace.xz": {
+            "ipc": 0.2037,
+            "accuracy": 18.52189781021898
+        },
+        "pr.twitter-168B.champsimtrace.xz": {
+            "ipc": 0.0222,
+            "accuracy": 7.149999720681315
+        },
+        "pr.twitter-3197B.champsimtrace.xz": {
+            "ipc": 0.02064,
+            "accuracy": 7.671918245688738
+        },
+        "xs.XL100nuclide-7B.champsimtrace.xz": {
+            "ipc": 0.7897,
+            "accuracy": 24.091778202676863
+        },
+        "pr.twitter-833B.champsimtrace.xz": {
+            "ipc": 0.01965,
+            "accuracy": 6.865190648095068
+        },
+        "xs.XL100nuclide-296B.champsimtrace.xz": {
+            "ipc": 0.0789,
+            "accuracy": 6.723835177387183
+        },
+        "xs.XL100nuclide-185B.champsimtrace.xz": {
+            "ipc": 0.07266,
+            "accuracy": 6.68122637547249
+        },
+        "xs.XL100nuclide-577B.champsimtrace.xz": {
+            "ipc": 0.07687,
+            "accuracy": 6.676325409794639
+        },
+        "xs.XL100unionized-56B.champsimtrace.xz": {
+            "ipc": 1.055,
+            "accuracy": 98.43984962406014
+        },
+        "xs.XL100unionized-66B.champsimtrace.xz": {
+            "ipc": 1.056,
+            "accuracy": 98.45246868091378
+        },
+        "xs.XL100unionized-28B.champsimtrace.xz": {
+            "ipc": 0.204,
+            "accuracy": 18.52685816293411
+        },
+        "xs.XL100unionized-75B.champsimtrace.xz": {
+            "ipc": 1.056,
+            "accuracy": 98.44131455399061
+        },
+        "xs.XL100nuclide-829B.champsimtrace.xz": {
+            "ipc": 0.08343,
+            "accuracy": 6.793136416243144
+        },
+        "pr.urand-2209B.champsimtrace.xz": {
+            "ipc": 0.0128,
+            "accuracy": 6.310244573429342
+        },
+        "pr.kron-349B.champsimtrace.xz": {
+            "ipc": 0.01337,
+            "accuracy": 6.353572487091625
+        },
+        "pr.kron-90B.champsimtrace.xz": {
+            "ipc": 0.01315,
+            "accuracy": 6.307426915851493
+        }
+    },
+    "Basic Stride": {
+        "600.perlbench_s-210B.champsimtrace.xz": {
+            "ipc": 1.633,
+            "accuracy": 35.62176165803109
+        },
+        "bc.kron-5154B.champsimtrace.xz": {
+            "ipc": 0.7224,
+            "accuracy": 10.513387374109556
+        },
+        "bc.twitter-2320B.champsimtrace.xz": {
+            "ipc": 0.4401,
+            "accuracy": 12.101483963618955
+        },
+        "bc.road-79B.champsimtrace.xz": {
+            "ipc": 0.2613,
+            "accuracy": 21.970881475013705
+        },
+        "bc.kron-2608B.champsimtrace.xz": {
+            "ipc": 0.209,
+            "accuracy": 15.874748886365623
+        },
+        "bc.road-95B.champsimtrace.xz": {
+            "ipc": 0.1847,
+            "accuracy": 23.539193399006482
+        },
+        "bc.web-1362B.champsimtrace.xz": {
+            "ipc": 2.396,
+            "accuracy": 45.47244094488189
+        },
+        "bc.road-174B.champsimtrace.xz": {
+            "ipc": 0.1555,
+            "accuracy": 21.074735515869047
+        },
+        "bc.web-1627B.champsimtrace.xz": {
+            "ipc": 0.692,
+            "accuracy": 47.24033875206853
+        },
+        "bc.twitter-1658B.champsimtrace.xz": {
+            "ipc": 0.1471,
+            "accuracy": 2.802632932222565
+        },
+        "bc.web-704B.champsimtrace.xz": {
+            "ipc": 0.5508,
+            "accuracy": 39.30530164533821
+        },
+        "bc.web-2078B.champsimtrace.xz": {
+            "ipc": 0.3813,
+            "accuracy": 14.912655436376443
+        },
+        "bc.urand-3004B.champsimtrace.xz": {
+            "ipc": 0.2514,
+            "accuracy": 3.262678947952503
+        },
+        "bfs.kron-154B.champsimtrace.xz": {
+            "ipc": 0.5565,
+            "accuracy": 98.43528922180607
+        },
+        "bfs.kron-223B.champsimtrace.xz": {
+            "ipc": 3.441,
+            "accuracy": 98.30508474576271
+        },
+        "bfs.kron-128B.champsimtrace.xz": {
+            "ipc": 0.4483,
+            "accuracy": 92.83314669652856
+        },
+        "bc.road-131B.champsimtrace.xz": {
+            "ipc": 0.1123,
+            "accuracy": 21.654453157406127
+        },
+        "bfs.kron-29B.champsimtrace.xz": {
+            "ipc": 3.643,
+            "accuracy": 98.30508474576271
+        },
+        "bfs.road-168B.champsimtrace.xz": {
+            "ipc": 1.371,
+            "accuracy": 98.4384037015616
+        },
+        "bfs.kron-469B.champsimtrace.xz": {
+            "ipc": 0.5555,
+            "accuracy": 98.44166666666668
+        },
+        "bfs.road-210B.champsimtrace.xz": {
+            "ipc": 3.648,
+            "accuracy": 98.30508474576271
+        },
+        "bc.twitter-309B.champsimtrace.xz": {
+            "ipc": 0.1078,
+            "accuracy": 4.026042637827087
+        },
+        "bfs.road-99B.champsimtrace.xz": {
+            "ipc": 1.37,
+            "accuracy": 98.4384037015616
+        },
+        "bfs.road-112B.champsimtrace.xz": {
+            "ipc": 0.174,
+            "accuracy": 20.85520664312303
+        },
+        "bfs.road-19B.champsimtrace.xz": {
+            "ipc": 0.2367,
+            "accuracy": 18.08860286158509
+        },
+        "bc.twitter-876B.champsimtrace.xz": {
+            "ipc": 0.09109,
+            "accuracy": 4.563025210084034
+        },
+        "bfs.road-128B.champsimtrace.xz": {
+            "ipc": 0.1736,
+            "accuracy": 18.714482041377263
+        },
+        "bfs.twitter-160B.champsimtrace.xz": {
+            "ipc": 0.4807,
+            "accuracy": 59.902266865752686
+        },
+        "bfs.twitter-10B.champsimtrace.xz": {
+            "ipc": 0.305,
+            "accuracy": 72.115603774445
+        },
+        "bfs.kron-542B.champsimtrace.xz": {
+            "ipc": 0.1556,
+            "accuracy": 16.811940814591768
+        },
+        "bfs.road-140B.champsimtrace.xz": {
+            "ipc": 0.1425,
+            "accuracy": 21.849517431554066
+        },
+        "bfs.twitter-163B.champsimtrace.xz": {
+            "ipc": 0.2837,
+            "accuracy": 68.99540608477074
+        },
+        "bfs.twitter-242B.champsimtrace.xz": {
+            "ipc": 0.2215,
+            "accuracy": 55.57948112388428
+        },
+        "bfs.twitter-44B.champsimtrace.xz": {
+            "ipc": 0.2426,
+            "accuracy": 17.37500180268528
+        },
+        "bfs.twitter-303B.champsimtrace.xz": {
+            "ipc": 0.2128,
+            "accuracy": 43.61040360501568
+        },
+        "bfs.web-1066B.champsimtrace.xz": {
+            "ipc": 1.194,
+            "accuracy": 96.29231595916174
+        },
+        "bfs.twitter-408B.champsimtrace.xz": {
+            "ipc": 0.1534,
+            "accuracy": 37.40033420864168
+        },
+        "bfs.web-1306B.champsimtrace.xz": {
+            "ipc": 1.12,
+            "accuracy": 95.95120685180379
+        },
+        "bfs.web-1825B.champsimtrace.xz": {
+            "ipc": 1.086,
+            "accuracy": 90.83503054989816
+        },
+        "bfs.web-56B.champsimtrace.xz": {
+            "ipc": 1.249,
+            "accuracy": 98.13333333333333
+        },
+        "bfs.urand-161B.champsimtrace.xz": {
+            "ipc": 0.1171,
+            "accuracy": 12.15584857869587
+        },
+        "bfs.web-79B.champsimtrace.xz": {
+            "ipc": 0.8857,
+            "accuracy": 46.86078252957234
+        },
+        "pr.road-138B.champsimtrace.xz": {
+            "ipc": 0.649,
+            "accuracy": 77.67467859139184
+        },
+        "bfs.urand-36B.champsimtrace.xz": {
+            "ipc": 0.1171,
+            "accuracy": 12.198812835022432
+        },
+        "bfs.urand-118B.champsimtrace.xz": {
+            "ipc": 0.08641,
+            "accuracy": 8.77181992817172
+        },
+        "bfs.urand-410B.champsimtrace.xz": {
+            "ipc": 0.1071,
+            "accuracy": 14.49277053599561
+        },
+        "pr.road-28B.champsimtrace.xz": {
+            "ipc": 0.6451,
+            "accuracy": 79.56556717618665
+        },
+        "bfs.urand-356B.champsimtrace.xz": {
+            "ipc": 0.09411,
+            "accuracy": 8.810911186527502
+        },
+        "bfs.urand-60B.champsimtrace.xz": {
+            "ipc": 0.1106,
+            "accuracy": 13.418859968824645
+        },
+        "pr.road-600B.champsimtrace.xz": {
+            "ipc": 0.6032,
+            "accuracy": 72.9424600351027
+        },
+        "pr.urand-129B.champsimtrace.xz": {
+            "ipc": 0.8661,
+            "accuracy": 97.45349997066243
+        },
+        "pr.twitter-2161B.champsimtrace.xz": {
+            "ipc": 0.04108,
+            "accuracy": 25.416004132189553
+        },
+        "pr.web-16B.champsimtrace.xz": {
+            "ipc": 0.7433,
+            "accuracy": 91.91285081240767
+        },
+        "pr.web-3076B.champsimtrace.xz": {
+            "ipc": 0.5184,
+            "accuracy": 50.58665092425193
+        },
+        "pr.web-4993B.champsimtrace.xz": {
+            "ipc": 0.6582,
+            "accuracy": 85.45410139213566
+        },
+        "pr.web-709B.champsimtrace.xz": {
+            "ipc": 0.8125,
+            "accuracy": 92.5439255143415
+        },
+        "xs.XL100hash-194B.champsimtrace.xz": {
+            "ipc": 0.1465,
+            "accuracy": 18.707673625706413
+        },
+        "pr.twitter-2741B.champsimtrace.xz": {
+            "ipc": 0.02284,
+            "accuracy": 7.0224890551045664
+        },
+        "xs.XL100hash-28B.champsimtrace.xz": {
+            "ipc": 0.2037,
+            "accuracy": 18.52189781021898
+        },
+        "pr.twitter-168B.champsimtrace.xz": {
+            "ipc": 0.0222,
+            "accuracy": 7.149999720681315
+        },
+        "pr.twitter-3197B.champsimtrace.xz": {
+            "ipc": 0.02064,
+            "accuracy": 7.671918245688738
+        },
+        "xs.XL100nuclide-7B.champsimtrace.xz": {
+            "ipc": 0.7897,
+            "accuracy": 24.091778202676863
+        },
+        "pr.twitter-833B.champsimtrace.xz": {
+            "ipc": 0.01965,
+            "accuracy": 6.865190648095068
+        },
+        "xs.XL100nuclide-185B.champsimtrace.xz": {
+            "ipc": 0.07266,
+            "accuracy": 6.68122637547249
+        },
+        "xs.XL100nuclide-296B.champsimtrace.xz": {
+            "ipc": 0.0789,
+            "accuracy": 6.723835177387183
+        },
+        "xs.XL100nuclide-577B.champsimtrace.xz": {
+            "ipc": 0.07687,
+            "accuracy": 6.676325409794639
+        },
+        "xs.XL100unionized-56B.champsimtrace.xz": {
+            "ipc": 1.055,
+            "accuracy": 98.43984962406014
+        },
+        "xs.XL100unionized-66B.champsimtrace.xz": {
+            "ipc": 1.056,
+            "accuracy": 98.45246868091378
+        },
+        "xs.XL100unionized-75B.champsimtrace.xz": {
+            "ipc": 1.056,
+            "accuracy": 98.44131455399061
+        },
+        "xs.XL100unionized-28B.champsimtrace.xz": {
+            "ipc": 0.204,
+            "accuracy": 18.52685816293411
+        },
+        "xs.XL100nuclide-829B.champsimtrace.xz": {
+            "ipc": 0.08343,
+            "accuracy": 6.793136416243144
+        },
+        "pr.urand-2209B.champsimtrace.xz": {
+            "ipc": 0.0128,
+            "accuracy": 6.310244573429342
+        },
+        "pr.kron-349B.champsimtrace.xz": {
+            "ipc": 0.01337,
+            "accuracy": 6.353572487091625
+        },
+        "pr.kron-90B.champsimtrace.xz": {
+            "ipc": 0.01315,
+            "accuracy": 6.307426915851493
+        }
+    }
+}

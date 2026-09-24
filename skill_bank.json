@@ -1,0 +1,18 @@
+[
+  {
+    "skill_title": "Diagnosing Low DELTA Prefetcher Accuracy",
+    "rule": "A DELTA prefetcher with degree 2 achieving only 14% accuracy suggests the current workload's memory access patterns are not effectively captured by simple 2-step delta sequences, necessitating a re-evaluation of the prefetching algorithm or its degree for better pattern matching."
+  },
+  {
+    "skill_title": "Resistance to Simple Prefetcher Switches",
+    "rule": "If a DELTA prefetcher with degree 2 achieves low accuracy and stagnant IPC, a direct switch to a STRIDE prefetcher with degree 1 is unlikely to yield significant improvements in prefetch accuracy or IPC, indicating the workload's memory access patterns may be inherently difficult for simple pattern-based prefetchers to exploit."
+  },
+  {
+    "skill_title": "Workload Resistance to Fundamental Prefetching",
+    "rule": "If simple pattern-based prefetchers like DELTA (degree 2) and STRIDE (degree 1) exhibit low accuracy and stagnant IPC, switching to an even simpler NEXT_LINE prefetcher will likely also result in minimal IPC gains and potentially lower accuracy, indicating the workload's memory access patterns are fundamentally resistant to basic prefetching algorithms."
+  },
+  {
+    "skill_title": "Resistance to Modestly Complex Pattern Prefetching",
+    "rule": "If basic prefetching algorithms (DELTA degree 2, STRIDE degree 1, NEXT_LINE) consistently yield low accuracy and stagnant IPC, then increasing the detection complexity of a pattern prefetcher, such as raising DELTA's degree to 3, is unlikely to improve prefetch accuracy or IPC, suggesting deep resistance to pattern-based prefetching for the workload."
+  }
+]

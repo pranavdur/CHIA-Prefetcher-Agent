@@ -1,0 +1,11 @@
+workloads:
+  - name: perlbench
+    trace_path: "traces/600.perlbench_s-210B.champsimtrace.xz"
+  - name: gap_bc
+    trace_path: "traces/bc.web-1362B.champsimtrace.xz"
+  - name: gap_bfs
+    trace_path: "traces/bfs.web-1306B.champsimtrace.xz"
+  - name: gap_pr
+    trace_path: "traces/pr.web-3076B.champsimtrace.xz"
+  - name: xs_xl100
+    trace_path: "traces/xs.XL100hash-194B.champsimtrace.xz"

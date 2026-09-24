@@ -1,0 +1,18 @@
+# Binaries and build outputs
+bin/
+*.o
+*.a
+
+# Trace files (too large for Git)
+*.champsimtrace.xz
+*.zip
+traces/
+
+# Temporary simulation logs
+sim_gen_*.log
+sim_baseline_*.log
+
+# Python virtual environment & cache
+venv/
+__pycache__/
+*.pyc

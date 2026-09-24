@@ -1,0 +1,339 @@
+[
+    {
+        "generation": 1,
+        "genome": {
+            "pattern_type": "DELTA",
+            "degree": 4,
+            "distance": 3,
+            "throttle_mode": "ACC_AWARE",
+            "pattern_params": 0,
+            "throttle_params": 0
+        },
+        "avg_ipc": 1.827625,
+        "avg_accuracy": 0.100015525,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.0281385
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.242915
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.466,
+                "accuracy": 0.107969
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0210396
+            }
+        }
+    },
+    {
+        "generation": 2,
+        "genome": {
+            "explanation": "The current configuration suffers from an extremely low accuracy of ~10%, causing severe cache pollution and bandwidth congestion, particularly in pointer-heavy and irregular workloads like perlbench and xs. XL100nuclide. Switching to a STRIDE prefetcher with a reduced degree of 2 and distance of 1 will reign in speculative requests, improving accuracy while conserving precious DRAM bandwidth.",
+            "new_genome": {
+                "pattern_type": "STRIDE",
+                "degree": 2,
+                "distance": 1,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828125,
+        "avg_accuracy": 0.09692921750000001,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.00892857
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.295455
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.0833333
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0
+            }
+        }
+    },
+    {
+        "generation": 3,
+        "genome": {
+            "explanation": "Given the poor accuracy of speculative pattern detectors on irregular workloads like xs.XL100nuclide and perlbench, switching to a NEXT_LINE pattern with HYBRID throttling will prevent off-path cache pollution. Keeping degree at 2 and distance at 1 provides safe spatial prefetching while adapting dynamically to both accuracy and bandwidth pressure.",
+            "new_genome": {
+                "pattern_type": "NEXT_LINE",
+                "degree": 2,
+                "distance": 1,
+                "throttle_mode": "HYBRID",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828,
+        "avg_accuracy": 0.014470966749999998,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.000725367
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.015123
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.466,
+                "accuracy": 0.0203645
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.421,
+                "accuracy": 0.021671
+            }
+        }
+    },
+    {
+        "generation": 4,
+        "genome": {
+            "explanation": "STRIDE prefetching with ACC_AWARE throttling in Generation 2 yielded the highest overall IPC (1.828125) and peak accuracy on graph workloads like bc.web (29.5%). Increasing the prefetch degree slightly to 3 while keeping distance at 1 under ACC_AWARE throttling aims to cover more stream depth without causing bandwidth saturation.",
+            "new_genome": {
+                "pattern_type": "STRIDE",
+                "degree": 3,
+                "distance": 1,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828125,
+        "avg_accuracy": 0.09329881000000001,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.00775194
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.28211
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.0833333
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0
+            }
+        }
+    },
+    {
+        "generation": 5,
+        "genome": {
+            "explanation": "DELTA prefetching captures dynamic stride patterns across complex memory layouts better than fixed STRIDE detectors. By reducing DELTA's aggressiveness to degree 2 and distance 1 (compared to degree 4/distance 3 in Generation 1) under ACC_AWARE throttling, we reduce off-path speculation and bus congestion while recovering prefetch accuracy on pointer-heavy workloads like perlbench and xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 2,
+                "distance": 1,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.827625,
+        "avg_accuracy": 0.11891145,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.0234375
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.274845
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.466,
+                "accuracy": 0.134146
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0432173
+            }
+        }
+    },
+    {
+        "generation": 6,
+        "genome": {
+            "explanation": "STRIDE prefetching with degree 2 and distance 1 achieved peak overall IPC in previous generations by capturing structured memory access in graph benchmarks like bfs.road. Transitioning the throttle mode to BW_AWARE allows the L2 prefetcher to dynamically issue stride requests when DRAM bus utilization is low while throttling back during high-congestive phases to reduce memory latency.",
+            "new_genome": {
+                "pattern_type": "STRIDE",
+                "degree": 2,
+                "distance": 1,
+                "throttle_mode": "BW_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828125,
+        "avg_accuracy": 0.09720296499999999,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.00884956
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.296629
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.0833333
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0
+            }
+        }
+    },
+    {
+        "generation": 7,
+        "genome": {
+            "explanation": "DELTA prefetching demonstrated the highest accuracy across irregular workloads like xs.XL100nuclide, but higher degree configurations induced bandwidth overhead. Reducing DELTA aggressiveness to degree 1 and distance 1 combined with HYBRID throttling dynamically suppresses low-confidence prefetches while managing memory bus congestion, minimizing cache pollution while capturing dynamic strides.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 1,
+                "throttle_mode": "HYBRID",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828125,
+        "avg_accuracy": 0.1304288,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.0243902
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.313679
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.138889
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.044757
+            }
+        }
+    },
+    {
+        "generation": 8,
+        "genome": {
+            "explanation": "DELTA prefetching under HYBRID throttling in Generation 7 achieved the highest overall prefetch accuracy (13.04%) and top IPC across workloads. Increasing the prefetch distance to 2 while keeping degree at 1 under HYBRID throttling aims to improve prefetch timeliness and latency concealment without increasing memory bus bandwidth pressure or cache pollution.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 2,
+                "throttle_mode": "HYBRID",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828125,
+        "avg_accuracy": 0.1304288,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.0243902
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.313679
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.138889
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.044757
+            }
+        }
+    },
+    {
+        "generation": 9,
+        "genome": {
+            "explanation": "DELTA prefetching under HYBRID throttling achieved the highest overall accuracy (13.04%) at degree 1. Increasing the prefetch degree to 2 under HYBRID throttling allows capturing deeper multi-delta spatial streams while relying on dynamic accuracy and bandwidth filtering to prevent cache pollution on irregular workloads like xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 2,
+                "distance": 1,
+                "throttle_mode": "HYBRID",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.827625,
+        "avg_accuracy": 0.10726464999999999,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.0295567
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.259281
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.466,
+                "accuracy": 0.118384
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.0218369
+            }
+        }
+    },
+    {
+        "generation": 10,
+        "genome": {
+            "explanation": "DELTA prefetching at degree 1 with HYBRID throttling achieved peak IPC and overall accuracy (13.04%). Switching to ACC_AWARE throttling with degree 1 and distance 1 removes overly conservative bandwidth constraints while strictly filtering low-confidence speculative deltas, targeting higher prefetch timeliness and accuracy on latency-sensitive workloads like xs.XL100nuclide.",
+            "new_genome": {
+                "pattern_type": "DELTA",
+                "degree": 1,
+                "distance": 1,
+                "throttle_mode": "ACC_AWARE",
+                "pattern_params": 0,
+                "throttle_params": 0
+            }
+        },
+        "avg_ipc": 1.828125,
+        "avg_accuracy": 0.1304288,
+        "trace_results": {
+            "600.perlbench_s-210B.champsimtrace.xz": {
+                "ipc": 2.387,
+                "accuracy": 0.0243902
+            },
+            "bc.web-704B.champsimtrace.xz": {
+                "ipc": 3.038,
+                "accuracy": 0.313679
+            },
+            "bfs.road-140B.champsimtrace.xz": {
+                "ipc": 1.468,
+                "accuracy": 0.138889
+            },
+            "xs.XL100nuclide-296B.champsimtrace.xz": {
+                "ipc": 0.4195,
+                "accuracy": 0.044757
+            }
+        }
+    }
+]
