@@ -12,7 +12,7 @@
 #include <map>
 #include <algorithm>
 
-// 🧬 Custom Prefetcher class mapped directly to ChampSim's modern module system
+//  Custom Prefetcher class mapped directly to ChampSim's modern module system
 struct custom_pref : public champsim::modules::prefetcher {
     using prefetcher::prefetcher; // Inherit the base class constructors
 

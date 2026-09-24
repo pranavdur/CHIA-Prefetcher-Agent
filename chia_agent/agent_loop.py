@@ -35,11 +35,11 @@ def write_json(path, data):
         json.dump(data, f, indent=4)
 
 def main():
-    print("🚀 Starting the Agentic Hardware Optimization Loop (Multi-Trace)...")
+    print(" Starting the Agentic Hardware Optimization Loop (Multi-Trace)...")
     client = GeminiArchitectClient()
     
     history = read_json(HISTORY_FILE, [])
-    print(f"📜 Found {len(history)} existing runs in history.")
+    print(f" Found {len(history)} existing runs in history.")
     
     current_genome = read_json(GENOME_FILE, {
         "pattern_type": "DELTA",
@@ -51,7 +51,7 @@ def main():
     })
 
     for gen in range(1, NUM_GENERATIONS + 1):
-        print(f"\n=================== 🧬 Generation {gen} / {NUM_GENERATIONS} ===================")
+        print(f"\n===================  Generation {gen} / {NUM_GENERATIONS} ===================")
         print(f"Active Genome Config: {json.dumps(current_genome)}")
         
         write_json(GENOME_FILE, current_genome)
@@ -96,14 +96,14 @@ def main():
                 total_ipc += ipc
                 total_acc += accuracy
                 valid_count += 1
-                print(f"   ✓ {trace_name}: IPC = {ipc:.4f}, Accuracy = {accuracy:.2f}%")
+                print(f"    {trace_name}: IPC = {ipc:.4f}, Accuracy = {accuracy:.2f}%")
             except Exception as e:
-                print(f"   ❌ Failed on {trace_name}: {e}")
+                print(f"    Failed on {trace_name}: {e}")
                 trace_results[trace_name] = {"ipc": 0.0, "accuracy": 0.0}
 
         avg_ipc = total_ipc / valid_count if valid_count > 0 else 0.0
         avg_acc = total_acc / valid_count if valid_count > 0 else 0.0
-        print(f"\n📊 Generation {gen} Aggregate -> Mean IPC: {avg_ipc:.4f}, Mean Accuracy: {avg_acc:.2f}%")
+        print(f"\n Generation {gen} Aggregate -> Mean IPC: {avg_ipc:.4f}, Mean Accuracy: {avg_acc:.2f}%")
 
         run_record = {
             "generation": gen,
@@ -116,16 +116,16 @@ def main():
         write_json(HISTORY_FILE, history)
 
         if gen < NUM_GENERATIONS:
-            print("🤖 Querying Gemini Architect for mutated genome...")
+            print(" Querying Gemini Architect for mutated genome...")
             try:
                 mutated = client.mutate_genome(current_genome, run_record, json.dumps(history))
                 if isinstance(mutated, dict) and mutated:
                     current_genome = mutated
-                    print(f"   ✨ Mutated Genome Received: {json.dumps(current_genome)}")
+                    print(f"    Mutated Genome Received: {json.dumps(current_genome)}")
                 else:
-                    print("   ⚠️ Received invalid genome, keeping current genome.")
+                    print("   ️ Received invalid genome, keeping current genome.")
             except Exception as e:
-                print(f"   ❌ Mutation query failed: {e}")
+                print(f"    Mutation query failed: {e}")
 
 if __name__ == "__main__":
     main()

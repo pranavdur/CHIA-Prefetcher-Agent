@@ -90,7 +90,7 @@ if __name__ == "__main__":
     TOTAL_GENERATIONS = 10
     trace_path = "traces/600.perlbench_s-210B.champsimtrace.xz"
     
-    print(f"🌐 Starting CHIA Loop with Phase 3/4 Skill Distillation ({TOTAL_GENERATIONS} Gens)...")
+    print(f" Starting CHIA Loop with Phase 3/4 Skill Distillation ({TOTAL_GENERATIONS} Gens)...")
 
     active_genome = {
         "pattern_type": "DELTA",
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     for gen in range(1, TOTAL_GENERATIONS + 1):
         print(f"\n==========================================")
-        print(f"🧬 Generation {gen}/{TOTAL_GENERATIONS}")
+        print(f" Generation {gen}/{TOTAL_GENERATIONS}")
         print(f"Active Genome: {json.dumps(active_genome)}")
         print(f"==========================================")
 
@@ -117,7 +117,7 @@ if __name__ == "__main__":
             json.dump(active_genome, f, indent=2)
 
         log_file = f"sim_gen_{gen}.log"
-        print("⚙️ Running ChampSim simulation...")
+        print("️ Running ChampSim simulation...")
         os.system(
             f"./bin/champsim_custom_loop "
             f"--warmup_instructions 1000000 "
@@ -126,7 +126,7 @@ if __name__ == "__main__":
         )
 
         metrics = parse_champsim_output(log_file)
-        print(f"📊 Results -> IPC: {metrics['ipc']:.4f} | Accuracy: {metrics['chia_accuracy']:.2f}%")
+        print(f" Results -> IPC: {metrics['ipc']:.4f} | Accuracy: {metrics['chia_accuracy']:.2f}%")
 
         history.append({
             "generation": gen, 
@@ -144,38 +144,38 @@ if __name__ == "__main__":
                 json.dump({"accuracy": best_accuracy, "ipc": best_ipc, "genome": best_genome}, f, indent=2)
 
         # Phase 3: Distill new architectural skill after generation 1
-        print("💡 Phase 3: Distilling architectural skill from performance delta...")
+        print(" Phase 3: Distilling architectural skill from performance delta...")
         try:
             new_skill = distill_skill(history, skill_bank, gen)
             skill_bank.append(new_skill)
-            print(f"   🎓 New Skill Distilled: [{new_skill.get('skill_title')}] -> {new_skill.get('rule')}")
+            print(f"    New Skill Distilled: [{new_skill.get('skill_title')}] -> {new_skill.get('rule')}")
             
             with open("skill_bank.json", "w") as f:
                 json.dump(skill_bank, f, indent=2)
         except Exception as e:
-            print(f"   ⚠️ Skill distillation skipped ({e}).")
+            print(f"   ️ Skill distillation skipped ({e}).")
 
         # Phase 4: Propose next mutation using Skill Bank
         if gen < TOTAL_GENERATIONS:
-            print("🤖 Phase 4: Querying Gemini for skill-guided mutation...")
+            print(" Phase 4: Querying Gemini for skill-guided mutation...")
             try:
                 response_data = ask_gemini_mutation(active_genome, history, best_genome, skill_bank, gen, TOTAL_GENERATIONS)
                 reasoning = response_data.pop("reasoning", "No reasoning provided.")
-                print(f"   🧠 Reasoning: {reasoning}")
+                print(f"    Reasoning: {reasoning}")
                 
                 history[-1]["gemini_reasoning"] = reasoning
                 active_genome = response_data
             except Exception as e:
-                print(f"   ⚠️ Mutation query failed ({e}). Reverting to best known genome.")
+                print(f"   ️ Mutation query failed ({e}). Reverting to best known genome.")
                 active_genome = dict(best_genome)
 
         with open("history_log.json", "w") as f:
             json.dump(history, f, indent=2)
 
     print("\n" + "="*50)
-    print(f"🎉 Step 6 Training Run Complete!")
-    print(f"🏆 Best Accuracy: {best_accuracy:.2f}% (IPC: {best_ipc:.4f})")
-    print(f"📚 Total Distilled Architectural Skills: {len(skill_bank)}")
+    print(f" Step 6 Training Run Complete!")
+    print(f" Best Accuracy: {best_accuracy:.2f}% (IPC: {best_ipc:.4f})")
+    print(f" Total Distilled Architectural Skills: {len(skill_bank)}")
     print("Winning Genome Architecture:")
     print(json.dumps(best_genome, indent=2))
     print("="*50)

@@ -13,7 +13,7 @@ class GeminiArchitectClient:
         """
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
-            print("\n❌ Error: GEMINI_API_KEY environment variable not found.")
+            print("\n Error: GEMINI_API_KEY environment variable not found.")
             print("Please export it by running: export GEMINI_API_KEY='your_api_key_here'")
             sys.exit(1)
 
@@ -33,13 +33,13 @@ Your goal is to optimize a CPU prefetcher's behavior (its "genome") to maximize 
 
 We are currently optimizing a custom ChampSim L2 Cache prefetcher running speculative algorithms.
 
-### 🧬 Current Hardware Genome (Active Config)
+###  Current Hardware Genome (Active Config)
 {json.dumps(current_genome, indent=2)}
 
-### 📊 Simulation Performance Metrics
+###  Simulation Performance Metrics
 {json.dumps(parsed_metrics, indent=2)}
 
-### 📜 Search History and Observations
+###  Search History and Observations
 {history_summary if history_summary else "This is the initial baseline run."}
 
 ### Microarchitectural Bottlenecks to Address:
@@ -49,7 +49,7 @@ We are currently optimizing a custom ChampSim L2 Cache prefetcher running specul
    - High misses with low useful prefetches suggest cache pollution or incorrect patterns.
 3. Look at 'l2c_miss_latency' and DRAM row misses. If latency is high, we are saturating the memory bus. We must throttle the prefetcher degree or distance.
 
-### 🧠 Your Task:
+###  Your Task:
 Analyze these results and output a MUTATED genome config. You can change:
 - 'pattern_type': ("NEXT_LINE", "STRIDE", or "DELTA")
 - 'degree': Aggressiveness level (integer 1 to 8)
@@ -95,20 +95,20 @@ Respond strictly in this JSON format:
                 # Check if it looks like a transient cloud error (503, 429, etc.)
                 if "503" in str(e) or "502" in str(e) or "429" in str(e):
                     sleep_time = backoff_factor ** attempt
-                    print(f"⚠️ API busy (Attempt {attempt + 1}/{max_retries}). Retrying in {sleep_time}s... Error: {e}")
+                    print(f"️ API busy (Attempt {attempt + 1}/{max_retries}). Retrying in {sleep_time}s... Error: {e}")
                     time.sleep(sleep_time)
                 else:
                     # Critical error, do not retry
-                    print(f"❌ Critical error communicating with Gemini API: {e}")
+                    print(f" Critical error communicating with Gemini API: {e}")
                     return None
 
-        print("❌ Exceeded maximum retries due to API unavailability.")
+        print(" Exceeded maximum retries due to API unavailability.")
         return None
 
 if __name__ == "__main__":
-    print("🤖 Initializing Gemini Architect Client...")
+    print(" Initializing Gemini Architect Client...")
     client = GeminiArchitectClient()
-    print("✅ Gemini Architect Client initialized successfully!")
+    print(" Gemini Architect Client initialized successfully!")
 
     # Mock data to run a live test of your API connection
     mock_genome = {
@@ -140,11 +140,11 @@ if __name__ == "__main__":
         "chia_accuracy": 0.213
     }
 
-    print("\n📡 Sending mock stats to Gemini API to test a mutation request...")
+    print("\n Sending mock stats to Gemini API to test a mutation request...")
     result = client.mutate_genome(mock_genome, mock_metrics)
 
     if result:
-        print("\n🎉 Connection Successful! Received response from Gemini:")
+        print("\n Connection Successful! Received response from Gemini:")
         print(json.dumps(result, indent=2))
     else:
-        print("\n❌ Connection Failed.")
+        print("\n Connection Failed.")

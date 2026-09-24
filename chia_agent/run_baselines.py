@@ -22,8 +22,8 @@ if not TRACE_FILES:
 
 NUM_WORKERS = min(os.cpu_count() or 4, len(TRACE_FILES))
 
-print(f"📁 Running fast sweep on {len(TRACE_FILES)} trace(s): {[os.path.basename(t) for t in TRACE_FILES]}")
-print(f"⚡ Parallel workers: {NUM_WORKERS}\n")
+print(f" Running fast sweep on {len(TRACE_FILES)} trace(s): {[os.path.basename(t) for t in TRACE_FILES]}")
+print(f" Parallel workers: {NUM_WORKERS}\n")
 
 BASELINES = {
     "No Prefetcher": {
@@ -93,7 +93,7 @@ results = {name: {} for name in BASELINES}
 
 for b_name, genome in BASELINES.items():
     print("=" * 65)
-    print(f"⚙️  Running Baseline Policy: {b_name}")
+    print(f"️  Running Baseline Policy: {b_name}")
     print("=" * 65)
     
     with open("active_genome.json", "w") as f:
@@ -110,12 +110,12 @@ for b_name, genome in BASELINES.items():
             print(f"  [Finished] {trace_name:<35} | IPC: {ipc:.4f} | Accuracy: {accuracy:.2f}%")
 
 print("\n" + "="*70)
-print("📊 MULTI-TRACE BASELINE SWEEP SUMMARY")
+print(" MULTI-TRACE BASELINE SWEEP SUMMARY")
 print("="*70)
 
 for trace_path in TRACE_FILES:
     t_name = os.path.basename(trace_path)
-    print(f"\n📍 Trace: {t_name}")
+    print(f"\n Trace: {t_name}")
     print(f"{'Policy':<22} | {'IPC':<10} | {'Prefetch Accuracy':<18}")
     print("-" * 55)
     for b_name in BASELINES:
@@ -123,7 +123,7 @@ for trace_path in TRACE_FILES:
         print(f"{b_name:<22} | {stats['ipc']:<10.4f} | {stats['accuracy']:<18.2f}%")
 
 print("\n" + "="*70)
-print("🌐 AGGREGATE SUMMARY ACROSS ALL TRACES")
+print(" AGGREGATE SUMMARY ACROSS ALL TRACES")
 print("="*70)
 print(f"{'Policy':<22} | {'Mean IPC':<10} | {'Mean Accuracy':<18} | {'IPC Uplift vs No-Pref'}")
 print("-" * 75)
@@ -138,7 +138,7 @@ for b_name in BASELINES:
 print("="*75)
 
 # =================================================================
-# 💾 EXPORT RESULTS TO JSON
+#  EXPORT RESULTS TO JSON
 # =================================================================
 import json
 
@@ -146,4 +146,4 @@ output_filename = "results_config3_L1L2Hierarchy.json"
 with open(output_filename, "w") as f:
     json.dump(results, f, indent=4)
 
-print(f"\n✅ Summary results successfully exported to {output_filename}")
+print(f"\n Summary results successfully exported to {output_filename}")
